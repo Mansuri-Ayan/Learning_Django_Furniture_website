@@ -1,0 +1,9 @@
+Django>=4.0,<5.0
+pytz>=2020.0
+sqlparse>=0.4.0
+asgiref>=3.4.0
+
+# Optional / commonly used extras you might need:
+django-crispy-forms
+Pillow
+django-filter
