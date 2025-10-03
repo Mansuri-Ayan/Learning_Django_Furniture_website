@@ -59,7 +59,7 @@
         <div class="collapse navbar-collapse" id="navbarsFurni">
           <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'index' %}">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li><a class="nav-link" href="{% url 'shop' %}">Shop</a></li>
             <li><a class="nav-link" href="{% url 'about' %}">About us</a></li>
@@ -89,11 +89,7 @@
     </nav>
     <!-- End Header/Navigation -->
 
-
-
-    {% block body %}
-    {% endblock body %}
-
+    {% block body %} {% endblock body %}
 
     <!-- Start Footer Section -->
     <footer class="footer-section">
