@@ -1,0 +1,137 @@
+<!-- @format -->
+
+{% extends "base.html"%} {% load static %} {% block body %}
+
+<div class="hero">
+  <div class="container">
+    <div class="d-flex justify-items-between justify-content-center">
+      <div class="text-center">
+        <div class="intro-excerpt">
+          <h1>Create Your Furni Account</h1>
+          <p class="mb-0">
+            Join our community of design lovers, unlock exclusive drops, and
+            make checkout a breeze.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="untree_co-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="p-4 p-lg-5 border bg-white">
+          <h2 class="mb-4 text-center">Let’s get you set up</h2>
+          <form action="/signup/" method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group mb-3">
+                  <label class="text-black" for="login-email">User Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your Nmae"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label class="text-black" for="signup-fname"
+                    >First name</label
+                  >
+                  <input
+                    type="text"
+                    id="first_name"
+                    name="first_name"
+                    class="form-control"
+                    placeholder="Jane"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-3">
+                  <label class="text-black" for="signup-lname">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="last_name"
+                    name="last_name"
+                    placeholder="Doe"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <label class="text-black" for="signup-email">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+              />
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group mb-3">
+                  <label class="text-black" for="signup-password"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="Create password"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-3">
+                  <label class="text-black" for="signup-confirm"
+                    >Confirm password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confo_password"
+                    name="confo_password"
+                    placeholder="Repeat password"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- <div class="form-group mb-4">
+              <label class="text-black" for="signup-phone">Phone number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="signup-phone"
+                placeholder="+1 555 0100"
+              />
+            </div> -->
+            <div class="form-group form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="terms" />
+              <label class="form-check-label" for="terms">
+                I agree to the <a href="#">Terms &amp; Conditions</a> and
+                <a href="#">Privacy Policy</a>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-lg w-100 mb-3">
+              Create Account
+            </button>
+            <p class="text-center mb-0">
+              Already have an account?
+              <a href="{% url 'login' %}">Log in instead</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}
